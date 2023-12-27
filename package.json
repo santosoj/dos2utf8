@@ -1,0 +1,27 @@
+{
+  "name": "dos2utf8",
+  "version": "0.0.216",
+  "description": "Convert DOS CP437 text to UTF-8 with cognate codepoints",
+  "homepage": "https://github.com/santosoj/dos2utf8",
+  "bin": "./dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist; tsc --build && sed -i '1 s~^~#!/usr/bin/env node\\n~' ./dist/index.js && chmod +x ./dist/index.js",
+    "dev": "ts-node ./src",
+    "start": "node ./dist",
+    "lint": "tsc --noEmit && eslint \"**/*.ts\" --quiet --fix"
+  },
+  "keywords": [],
+  "author": "Jonas Santoso <jonas.santoso@proton.me>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "prettier": "3.1.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
